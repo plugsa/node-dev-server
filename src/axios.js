@@ -17,7 +17,7 @@ const btn = document.getElementById("btn");
 // const axios = require('axios').default;
 
 const getdata = () => {
-    axios.get('https://temi-api.vercel.app//books/data').then(response => {
+    axios.get('https://temi-api.vercel.app/books/data').then(response => {
         console.log(response.data.data);
         const x = response.data.data;
         const datajason = JSON.stringify(x)
@@ -28,7 +28,7 @@ const getdata = () => {
 
 const getiddata = () => {
     
-        axios.get('https://temi-api.vercel.app//book/2').then(response => {
+        axios.get('https://temi-api.vercel.app/book/2').then(response => {
             console.log(response.data.data);
             const x = response.data.data;
             const datajason = JSON.stringify(x)
@@ -39,7 +39,7 @@ const getiddata = () => {
 };
 
 const postdata = () => {
-    axios.post('https://temi-api.vercel.app//book', {
+    axios.post('https://temi-api.vercel.app/book', {
         name: 'Fred',
         author: 'Flintstone'
       })
@@ -60,7 +60,7 @@ btn.addEventListener("click", () => {
   const name = nameInput.value;
   const author = authorInput.value;
 
-  axios.post("https://temi-api.vercel.app//book", {
+  axios.post("https://temi-api.vercel.app/book", {
       name: name,
       author: author
     })
